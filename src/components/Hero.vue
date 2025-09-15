@@ -2,7 +2,7 @@
   <div class="grid md:grid-cols-2 gap-8 items-center md:flex-row-reverse">
     <!-- Right Image Section -->
     <div
-      class="container-card p-6 bg-black w-80 h-100 rounded-xl animate-fade-in delay-400"
+      class="container-card p-6 w-80 h-100 rounded-xl overflow-hidden bg-white dark:bg-gray-900 shadow-md dark:shadow-lg transition-colors duration-500 animate-fade-in delay-400"
     >
       <img
         src="../assets/Nov Raksa.png"
@@ -26,13 +26,13 @@
       >
         Nov Raksa
       </h1>
-   
+
       <p
         class="text-lg text-zinc-600 dark:text-zinc-300 animate-fade-in delay-200"
       >
-        I am an Information Technology Engineering student at the Royal University of Phnom Penh,
-        passionate about building engaging and accessible user interfaces with
-        React and modern web technologies.
+        I am an Information Technology Engineering student at the Royal
+        University of Phnom Penh, passionate about building engaging and
+        accessible user interfaces with React and modern web technologies.
       </p>
 
       <div class="flex gap-3 pt-2" role="group" aria-label="Primary actions">
@@ -60,10 +60,21 @@
 
     <!-- CV Modal -->
     <Transition name="modal">
-      <div v-if="showCV" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" @click.self="showCV = false">
-        <div class="bg-white p-6 rounded-lg shadow-lg max-w-5xl w-full h-3/4 flex flex-col modal-content">
+      <div
+        v-if="showCV"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+        @click.self="showCV = false"
+      >
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg max-w-5xl w-full h-3/4 flex flex-col modal-content"
+        >
           <div class="flex justify-end items-center mb-4">
-            <button @click="showCV = false" class="text-zinc-500 hover:text-zinc-800 text-3xl">&times;</button>
+            <button
+              @click="showCV = false"
+              class="text-zinc-500 hover:text-zinc-800 text-3xl"
+            >
+              &times;
+            </button>
           </div>
           <iframe :src="cvFile" class="flex-1 w-full" frameborder="0"></iframe>
         </div>
