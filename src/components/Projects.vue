@@ -51,7 +51,7 @@
             class="btn"
             :aria-label="`View source code for ${project.title}`"
           >
-            Source 
+            Source Code 
           </a>
         </div>
       </div>
